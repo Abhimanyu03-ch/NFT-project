@@ -1,6 +1,6 @@
 # NFT-project
 
-This project involves creating a 5-item NFT collection using DALLE 2 or Midjourney, storing these items on IPFS using pinata.cloud, deploying an ERC721 or ERC1155 contract to the Goerli Ethereum Testnet, and transferring them to Polygon Mumbai using the FxPortal Bridge.
+This project involves creating a 5-item NFT collection using DALLE 2 or Midjourney, storing these items on IPFS using pinata.cloud, deploying an ERC721 or ERC1155 contract to the sepolia Ethereum Testnet, and transferring them to Polygon amoy using the FxPortal Bridge.
 
 ## Steps to Set Up and Deploy:
 
@@ -12,9 +12,9 @@ Use DALLE 2 or Midjourney to generate a unique 5-item NFT collection.
 
 Upload generated NFT items to IPFS for decentralized storage using [pinata.cloud](https://pinata.cloud).
 
-### 3. Deploy Contract on Goerli Ethereum Testnet
+### 3. Deploy Contract on sepolia Ethereum Testnet
 
-Deploy an ERC721 or ERC1155 contract to the Goerli Ethereum Testnet. This contract will manage the minting and transfer of your NFTs.
+Deploy an ERC721 or ERC1155 contract to the sepolia Ethereum Testnet. This contract will manage the minting and transfer of your NFTs.
 
 ### 4. Implement `promptDescription` Function
 
@@ -30,16 +30,16 @@ Ensure your contract includes a `promptDescription` function that returns the pr
 
 Write a Hardhat script (`batchMint.js`) to batch mint all NFTs. This script will facilitate efficient minting of your entire collection.
 
-#### Batch Transfer to Polygon Mumbai
+#### Batch Transfer to Polygon amoy
 
-Write another Hardhat script (`batchTransfer.js`) to batch transfer all NFTs from Ethereum to Polygon Mumbai using the FxPortal Bridge. Steps include:
+Write another Hardhat script (`batchTransfer.js`) to batch transfer all NFTs from Ethereum to Polygon amoy using the FxPortal Bridge. Steps include:
 - Approving NFTs for transfer.
 - Depositing NFTs to the FxPortal Bridge for cross-chain transfer.
 
 ### 7. Testing
 
 Test the functionality by:
-- Using `balanceOf` on the Polygon Mumbai network to verify NFT balances post-transfer.
+- Using `balanceOf` on the Polygon amoy network to verify NFT balances post-transfer.
 
 ## Project Structure
 
@@ -66,8 +66,8 @@ npm install
 2. **Run Hardhat Scripts**: Execute Hardhat scripts for minting and transferring NFTs.
 
    ```bash
-   npx hardhat run scripts/batchMint.js --network goerli
-   npx hardhat run scripts/batchTransfer.js --network mumbai
+   npx hardhat run scripts/batchMint.js --network sepolia
+   npx hardhat run scripts/batchTransfer.js --network amoy
    ```
 
 3. **Test**: Run tests to ensure proper functionality.
